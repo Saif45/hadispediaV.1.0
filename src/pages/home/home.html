@@ -1,0 +1,165 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/logo.svg">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-header>
+  <ion-navbar color="twitter">
+
+    <ion-button start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        <ion-title >Hadispedia</ion-title>
+      </button>
+    </ion-button>
+
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <!--<img  class="myphoto" id="imgPlacement"  style="align-items: center" src="assets/imgs/logo_baru.png" style="align-items: center" >-->
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+  <hr style="padding:4px;">
+  <p class="text">
+    <h9><b> KATEGORI POPULER </b> </h9>
+  </p>
+  <ion-grid class="card-background-page" padding>
+    <ion-row>
+      <ion-col>
+        <img src="assets/imgs/icon1.png" class="icon">
+      </ion-col>
+      <ion-col (click)="aqidah()" class="table">
+        <img src="assets/imgs/icon2.png" class="icon">
+      </ion-col>
+      <ion-col (click)="hadist()">
+        <img src="assets/imgs/icon3.png" class="icon" />
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col>   <h7>Akhlak</h7> </ion-col>
+      <ion-col>    <h7>Aqidah</h7> </ion-col>
+      <ion-col>    <h7>Hadist</h7> </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col (click)="muamalah()">
+        <img src="assets/imgs/icon4.png" class="icon">
+      </ion-col>
+      <ion-col (click)="ibadah()" class="table">
+        <img src="assets/imgs/icon5.png" class="icon">
+      </ion-col>
+      <ion-col (click)="fiqih()">
+        <img src="assets/imgs/icon6.png" class="icon">
+      </ion-col>
+    </ion-row>
+    <ion-row class="col2">
+      <ion-col>   <h7>Muamalah</h7> </ion-col>
+      <ion-col>    <h7>Ibadah</h7> </ion-col>
+      <ion-col>    <h7>Fiqih</h7> </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <hr style="padding:6px;">
+
+  <ion-item>
+    <ion-thumbnail item-left class="item-ribbon">
+      <span class="ribbon cruzeiro">
+        <span>Berita Baru</span>
+      </span>
+      <img src="assets/imgs/logo-muhammadiyah.jpg">
+    </ion-thumbnail>
+    <div>
+      <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+      <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+      <button ion-button basic color="twitter" (click)="TampilBerita()">Baca</button>
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img src="assets/imgs/logo-muhammadiyah.jpg">
+    </ion-thumbnail>
+    <div>
+      <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+      <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+      <button ion-button basic color="twitter" (click)="TampilBerita()">Baca</button>
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img src="assets/imgs/logo-muhammadiyah.jpg">
+    </ion-thumbnail>
+    <div>
+      <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+      <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+      <button ion-button basic color="twitter" (click)="TampilBerita()">Baca</button>
+    </div>
+  </ion-item>
+
+  <hr style="padding:4px;">
+  <ion-list no-lines>
+    <ion-item>
+      <div item-start>
+        <ion-icon style="font-size: 30px" name="custom-calendar"></ion-icon>
+      </div>
+      <h2>Berita Terbaru</h2>
+      <p>Kegiatan Sosialisasi Keagamaan</p>
+      <a button ion-button color="twitter" item-end medium clear (click)="detailKategori()">Lihat Semua</a>
+    </ion-item>
+
+    <ion-slides autoplay="2000" loop="true" #slider spaceBetween="10" slidesPerView="2" padding>
+      <ion-slide *ngFor="let n of [1,2,3,4,5,6]">
+        <img class="full-image" src="assets/imgs/berita_1.png" (click)="TampilBerita()">
+        <div class="card-description"> Penyerahan Wakaf Buku Himpunan Pusat Tarjih Muhammadiyah dari PP Muhammadiyah
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-list>
+
+  <hr style="padding:6px;">
+
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img src="assets/imgs/logo-muhammadiyah.jpg">
+    </ion-thumbnail>
+    <div>
+      <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+      <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+      <button ion-button basic color="twitter" (click)="TampilBerita()">Baca</button>
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img src="assets/imgs/logo-muhammadiyah.jpg">
+    </ion-thumbnail>
+    <div>
+      <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+      <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+      <button ion-button basic color="twitter" (click)="TampilBerita()">Baca</button>
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img src="assets/imgs/logo-muhammadiyah.jpg">
+    </ion-thumbnail>
+    <div>
+      <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+      <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+      <button ion-button basic color="twitter" (click)="TampilBerita()">Baca</button>
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img src="assets/imgs/logo-muhammadiyah.jpg">
+    </ion-thumbnail>
+    <div>
+      <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+      <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+      <button ion-button basic color="twitter" (click)="TampilbacaBerita()">Baca</button>
+    </div>
+  </ion-item>
+</ion-content>

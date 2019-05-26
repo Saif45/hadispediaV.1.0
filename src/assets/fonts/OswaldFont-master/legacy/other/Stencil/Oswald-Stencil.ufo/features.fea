@@ -1,0 +1,13 @@
+feature liga {
+  sub fi by fi;
+
+  sub t t by tt;
+
+  sub f l by fl;
+
+  sub f f by ff;
+
+  sub f f i by ffi;
+
+  sub f f l by ffl;
+} liga;

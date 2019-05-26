@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar color="twitter">
+    <ion-button start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        <ion-title>Tanya Jawab</ion-title>
+      </button>
+    </ion-button>
+  </ion-navbar>
+  <div>
+    <ion-segment mode="md" [(ngModel)]="tanya" color="twitter">
+      <ion-segment-button value="pertanyaan">
+        Pertanyaan
+      </ion-segment-button>
+      <ion-segment-button value="tanggapan">
+        Tanggapan
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="tanya">
+    <div *ngSwitchCase="'pertanyaan'">
+      <ion-list-header>Hari ini</ion-list-header>
+      <ion-card>
+        <ion-card-header class="tanya">
+          Bagaimana Hukum makan berdiri ?
+        </ion-card-header>
+        <ion-card-content>
+          Hukum makan berdiri dam islam dijelaskan pada salah satu hadis yang disampaikan oleh salah satu sahabat nabi.
+        </ion-card-content>
+        <a button ion-button color="secondary" item-end medium clear (click)="tanyaJawabs()">Jawab</a>
+      </ion-card>
+      <ion-card>
+        <ion-card-header class="tanya">
+          Bagaimana Hukum minum berdiri ?
+        </ion-card-header>
+        <ion-card-content>
+          Hukum minum sendiri dalam islam telah tercantum dalam hadis no...
+        </ion-card-content>
+        <a button ion-button color="secondary" item-end medium clear (click)="tanyaJawabs()">Jawab</a>
+      </ion-card>
+
+      <ion-list-header>Minggu Ini </ion-list-header>
+      <ion-card>
+        <ion-card-header class="tanya">
+          Bagaimana Hukum makan berdiri ?
+        </ion-card-header>
+        <ion-card-content>
+          Hukum makan berdiri dam islam dijelaskan pada salah satu hadis yang disampaikan oleh salah satu sahabat nabi.
+        </ion-card-content>
+        <a button ion-button color="secondary" item-end medium clear (click)="tanyaJawabs()">Jawab</a>
+      </ion-card>
+      <ion-card>
+        <ion-card-header class="tanya">
+          Bagaimana Hukum minum berdiri ?
+        </ion-card-header>
+        <ion-card-content>
+          Hukum minum sendiri dalam islam telah tercantum dalam hadis no...
+        </ion-card-content>
+        <a button ion-button color="secondary" item-end medium clear (click)="tanyaJawabs()">Jawab</a>
+      </ion-card>
+      <ion-card>
+        <ion-card-header class="tanya">
+          Bagaimana Hukum makan berdiri ?
+        </ion-card-header>
+        <ion-card-content>
+          Hukum makan berdiri dam islam dijelaskan pada salah satu hadis yang disampaikan oleh salah satu sahabat nabi.
+        </ion-card-content>
+        <a button ion-button color="secondary" item-end medium clear (click)="tanyaJawabs()">Jawab</a>
+      </ion-card>
+    </div>
+
+    <div *ngSwitchCase="'tanggapan'">
+      <ion-list-header>Belum Terjawab</ion-list-header>
+      <ion-card>
+        <ion-card-header class="tanya">
+          Bagaimana Hukum makan berdiri ?
+        </ion-card-header>
+        <a button ion-button color="secondary" item-end medium clear (click)="tanyaJawabs()">Edit Tanggapan</a>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

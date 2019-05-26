@@ -1,0 +1,44 @@
+<!--
+  Generated template for the BuatBeritaPage page.
+
+  See httpnavigation://ionicframework.com/docs/components/# for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Buat Berita</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img src="assets/imgs/berita_1.png" style="width:100%">
+  <ion-list>
+  <ion-list-header>
+	JUDUL BERITA
+  </ion-list-header>
+  <ion-item>
+  	<ion-input type="text" placeholder="Judul Berita"></ion-input>
+ </ion-item>
+  </ion-list>
+      <ion-list>
+      <ion-item>
+       <ion-label>Kategori Berita</ion-label>
+        <ion-select >
+         <ion-option value="Aqidah">Aqidah</ion-option>
+         <ion-option value="Akhlak" >Akhlak</ion-option>   
+         <ion-option value="Muamalah" >Muamalah</ion-option>   
+        </ion-select>
+      </ion-item>
+  </ion-list>
+  <ion-item>
+    <ion-label>Editor</ion-label>
+    <ion-textarea clearOnEdit="true"></ion-textarea>
+  </ion-item>
+  <!-- Textarea with custom number of rows and cols -->
+
+<quill-editor [modules]="{toolbar:[ [{ 'header': 1 }, { 'header': 2 }],['bold','italic','underline','strike','blockquote'],[{ 'list': 'ordered'}, { 'list': 'bullet' },{ 'align': []}]]}">
+</quill-editor>
+
+<button ion-button class="login-button" color="secondary">Kirim</button>
+
+</ion-content>

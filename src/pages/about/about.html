@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-navbar color="twitter">
+    <ion-button start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+        <ion-title>Berita</ion-title>
+      </button>
+    </ion-button>
+  </ion-navbar>
+  <div>
+  </div>
+</ion-header>
+
+<ion-content>
+      <div class="headline">
+        <ion-list no-lines>
+          <ion-item>
+            <ion-slides autoplay="2500" loop="true" pager color="twitter">
+              <ion-slide>
+                <ion-card>
+                  <img src="assets/imgs/berita_1.png" />
+                </ion-card>
+              </ion-slide>
+              <ion-slide>
+                <ion-card>
+                  <img src="assets/imgs/berita_2.jpg" />
+                </ion-card>
+              </ion-slide>
+              <ion-slide>
+                <ion-card>
+                  <img src="assets/imgs/berita_3.jpg" />
+                </ion-card>
+              </ion-slide>
+            </ion-slides>
+          </ion-item>
+        </ion-list>
+      </div>
+      <ion-item (click)="TampilBerita()">
+        <ion-thumbnail item-left class="item-ribbon">
+          <span class="ribbon cruzeiro">
+            <span>Berita Baru</span>
+          </span>
+          <img src="assets/imgs/logo-muhammadiyah.jpg">
+        </ion-thumbnail>
+        <div>
+          <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+          <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+        </div>
+      </ion-item>
+      <ion-item (click)="TampilBerita()">
+        <ion-thumbnail item-left>
+          <img src="assets/imgs/logo-muhammadiyah.jpg">
+        </ion-thumbnail>
+        <div>
+          <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+          <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+
+        </div>
+      </ion-item>
+      <ion-item (click)="TampilBerita()">
+        <ion-thumbnail item-left>
+          <img src="assets/imgs/logo-muhammadiyah.jpg">
+        </ion-thumbnail>
+        <div>
+          <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+          <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+        </div>
+      </ion-item>
+      <ion-item (click)="TampilBerita()">
+        <ion-thumbnail item-left>
+          <img src="assets/imgs/logo-muhammadiyah.jpg">
+        </ion-thumbnail>
+        <div>
+          <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+          <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+        </div>
+      </ion-item>
+      <ion-item (click)="TampilBerita()">
+        <ion-thumbnail item-left>
+          <img src="assets/imgs/logo-muhammadiyah.jpg">
+        </ion-thumbnail>
+        <div>
+          <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+          <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+        </div>
+      </ion-item>
+      <ion-item (click)="TampilBerita()">
+        <ion-thumbnail item-left>
+          <img src="assets/imgs/logo-muhammadiyah.jpg">
+        </ion-thumbnail>
+        <div>
+          <h2>Fatwa Terbaru Pusat Tarjih Muh </h2>
+          <p>Pada Hari ini Pusat Tarjih telah mengeluarkan putusna baru mengenai pernikahan</p>
+        </div>
+      </ion-item>
+
+      <ion-fab right bottom #fab>
+        <button ion-fab mini color="twitter">
+          <ion-icon name="add"></ion-icon>
+        </button>
+        <ion-fab-list side="top">
+          <button ion-fab (click)="openGallery(fab,false)">
+            <ion-icon name="camera" color="twitter"></ion-icon>
+          </button>
+          <button ion-fab (click)="openGallery(fab,false)">
+            <ion-icon name="image" color="twitter"></ion-icon>
+          </button>
+        </ion-fab-list>
+      </ion-fab>
+</ion-content>
